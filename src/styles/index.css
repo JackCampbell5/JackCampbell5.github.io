@@ -18,7 +18,22 @@
   --color-brand-pink: oklch(70% 0.20 350);          /* warm pink accent */
   --color-brand-pink-dark: oklch(62% 0.22 350);
   --color-brand-sky: oklch(68% 0.16 238);           /* blue accent */
+  --color-brand-sky-light: oklch(74% 0.13 238);    /* lighter for dark-mode text */
   --color-brand-sky-dark: oklch(60% 0.18 238);
+
+  /* ── Extended project accent colors ──
+     Three extra hues so each of the six projects gets a unique color.
+     Rose: warm coral between pink and red.
+     Teal: between blue and green.
+     Amber: warm golden yellow.
+  */
+  --color-brand-rose: oklch(65% 0.22 12);           /* coral-rose */
+  --color-brand-rose-light: oklch(72% 0.18 12);     /* lighter for dark-mode text */
+  --color-brand-teal: oklch(63% 0.14 196);          /* teal */
+  --color-brand-teal-light: oklch(70% 0.12 196);    /* lighter for dark-mode text */
+  --color-brand-amber: oklch(72% 0.16 65);          /* warm amber */
+  --color-brand-amber-light: oklch(78% 0.13 65);    /* lighter for dark-mode text */
+  --color-brand-pink-light: oklch(76% 0.16 350);    /* lighter pink for dark-mode text */
 
   /* ── Semantic background tokens ──
      Not flat white/black — tiny violet chroma tint makes accents feel intentional.

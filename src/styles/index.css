@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+/* Class-based dark mode: dark: utilities apply when an ancestor has class="dark" */
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  /* ── Fonts ── */
+  --font-sans: 'DM Sans Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Plus Jakarta Sans Variable', ui-sans-serif, system-ui, sans-serif;
+
+  /* ── Brand colors ──
+     OKLCH gives perceptually uniform chroma: violet-500 at L=58% and pink-400 at L=70%
+     have similar visual weight even though their hues differ by ~58°.
+  */
+  --color-brand-violet: oklch(58% 0.24 292);       /* primary purple */
+  --color-brand-violet-light: oklch(65% 0.22 292); /* lighter variant for dark-mode text */
+  --color-brand-violet-dark: oklch(50% 0.24 292);  /* pressed / hover */
+  --color-brand-pink: oklch(70% 0.20 350);          /* warm pink accent */
+  --color-brand-pink-dark: oklch(62% 0.22 350);
+  --color-brand-sky: oklch(68% 0.16 238);           /* blue accent */
+  --color-brand-sky-dark: oklch(60% 0.18 238);
+
+  /* ── Semantic background tokens ──
+     Not flat white/black — tiny violet chroma tint makes accents feel intentional.
+  */
+  --color-canvas: oklch(98.5% 0.004 292);           /* page background, light */
+  --color-canvas-dark: oklch(13% 0.030 292);        /* page background, dark */
+  --color-surface: oklch(96% 0.006 292);            /* cards / inputs, light */
+  --color-surface-dark: oklch(18% 0.025 292);       /* cards / inputs, dark */
+  --color-border: oklch(88% 0.008 292);             /* borders, light */
+  --color-border-dark: oklch(26% 0.020 292);        /* borders, dark */
+
+  /* ── Semantic text tokens ── */
+  --color-ink: oklch(18% 0.010 292);                /* body text, light */
+  --color-ink-dark: oklch(95% 0.005 292);           /* body text, dark */
+  --color-ink-muted: oklch(48% 0.010 292);          /* secondary text, light */
+  --color-ink-muted-dark: oklch(65% 0.010 292);     /* secondary text, dark */
+}
+
+/* ── Base styles ── */
+@layer base {
+  html {
+    background-color: var(--color-canvas);
+    color: var(--color-ink);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html.dark {
+    background-color: var(--color-canvas-dark);
+    color: var(--color-ink-dark);
+  }
+
+  /* Respect reduced motion for all transitions */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}

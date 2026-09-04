@@ -1,0 +1,19 @@
+# Custom domain — instructions
+#
+# Currently using the default GitHub Pages URL: jackcampbell5.github.io
+# No CNAME record is needed for that.
+#
+# To point a custom domain here later:
+#   1. Replace everything in this file with just your domain, e.g.:
+#        jackcamp.dev
+#   2. In your DNS provider, add a CNAME record:
+#        Name: www (or @)  →  Value: jackcampbell5.github.io
+#      For an apex domain (@), use four A records pointing to GitHub's IPs instead:
+#        185.199.108.153
+#        185.199.109.153
+#        185.199.110.153
+#        185.199.111.153
+#   3. In GitHub repo Settings → Pages, set your custom domain.
+#   4. GitHub will auto-provision an SSL certificate within a few minutes.
+#
+# Leave this file in place even without a custom domain — GitHub Pages expects it.

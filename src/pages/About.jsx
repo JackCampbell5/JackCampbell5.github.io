@@ -8,7 +8,7 @@ export default function About() {
       </h1>
 
       <div className="grid lg:grid-cols-3 gap-12">
-        {/* Bio */}
+        {/* Bio + education */}
         <div className="lg:col-span-2 flex flex-col gap-5">
           <p className="text-ink dark:text-ink-dark leading-relaxed">
             Software engineer, drawn to problems nobody is working on yet and the gap between the
@@ -32,30 +32,61 @@ export default function About() {
             to get people outdoors. Always up for a conversation; reach out anytime.
           </p>
 
-          <p className="mt-2 text-brand-violet dark:text-brand-violet-light font-medium">
+          <p className="mt-2 font-medium text-brand-violet dark:text-brand-violet-light">
             Open to full-time roles — graduating May 2027.
           </p>
 
-          {/* Resume — replace href with real Google Drive URL (Batch C) */}
-          <div className="mt-4">
+          {/* Resume link — replace href with real Google Drive URL (Batch C) */}
+          <div className="mt-2">
             <a
               href="#"
               aria-disabled="true"
               className="inline-flex items-center px-5 py-2.5 rounded-lg bg-brand-violet text-white font-medium text-sm opacity-50 cursor-not-allowed"
+              tabIndex={-1}
             >
               Resume (link coming soon)
             </a>
           </div>
+
+          {/* Education */}
+          <div className="mt-6 pt-6 border-t border-border dark:border-border-dark">
+            <h2 className="font-display text-lg font-semibold text-ink dark:text-ink-dark mb-4">
+              Education
+            </h2>
+            <div className="flex flex-col gap-1">
+              <div className="flex items-baseline justify-between flex-wrap gap-x-4">
+                <span className="font-medium text-ink dark:text-ink-dark">
+                  University of Maryland, College Park
+                </span>
+                <span className="text-sm text-ink-muted dark:text-ink-muted-dark font-mono shrink-0">
+                  Expected May 2027
+                </span>
+              </div>
+              <p className="text-sm text-ink-muted dark:text-ink-muted-dark">
+                B.S. Computer Science — Machine Learning Concentration
+              </p>
+              <p className="text-sm text-brand-violet dark:text-brand-violet-light font-medium">
+                GPA 3.93 / 4.0
+              </p>
+              <div className="mt-2 flex flex-wrap gap-2">
+                {['QUEST Honors Program', 'Scholars Program'].map(prog => (
+                  <span
+                    key={prog}
+                    className="px-2.5 py-1 rounded-md text-xs bg-surface dark:bg-surface-dark border border-border dark:border-border-dark text-ink-muted dark:text-ink-muted-dark"
+                  >
+                    {prog}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
 
-        {/* Skills */}
+        {/* Skills sidebar */}
         <aside>
-          <h2 className="font-display text-lg font-semibold text-ink dark:text-ink-dark mb-4">
+          <h2 className="font-display text-lg font-semibold text-ink dark:text-ink-dark mb-5">
             Skills
           </h2>
-          <p className="text-xs text-ink-muted dark:text-ink-muted-dark mb-4">
-            [ Replace with real skills in <code>src/data/skills.js</code> (Batch D) ]
-          </p>
           {skills.map(group => (
             <div key={group.category} className="mb-5">
               <h3 className="text-xs font-semibold uppercase tracking-wider text-ink-muted dark:text-ink-muted-dark mb-2">

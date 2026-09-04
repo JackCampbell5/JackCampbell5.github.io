@@ -132,7 +132,7 @@ export default function Home() {
             GitHub
           </a>
           <a
-            href="https://linkedin.com/in/jackcampbell15"
+            href="https://linkedin.com/in/jackcampbell5"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-border dark:border-border-dark text-sm text-ink-muted dark:text-ink-muted-dark hover:border-brand-violet hover:text-brand-violet dark:hover:border-brand-violet-light dark:hover:text-brand-violet-light transition-colors focus-visible:outline-2 focus-visible:outline-brand-violet focus-visible:outline-offset-2"

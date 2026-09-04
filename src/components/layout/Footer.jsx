@@ -19,7 +19,7 @@ export default function Footer() {
             GitHub
           </a>
           <a
-            href="https://linkedin.com/in/jackcampbell15"
+            href="https://linkedin.com/in/jackcampbell5"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-brand-violet dark:hover:text-brand-violet-light transition-colors focus-visible:outline-2 focus-visible:outline-brand-violet focus-visible:outline-offset-2 rounded-sm"

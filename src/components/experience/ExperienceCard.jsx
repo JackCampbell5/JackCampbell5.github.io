@@ -39,7 +39,9 @@ const colorMap = {
   },
 }
 
-export default function ExperienceCard({ exp, mode }) {
+// dateInHeader: true  → date stacks below title inside the icon block (homepage grid)
+//               false → date floats to the right of the header row (experience page)
+export default function ExperienceCard({ exp, mode, dateInHeader = false }) {
   const [expanded, setExpanded] = useState(false)
   const colors = colorMap[exp.color] ?? colorMap.violet
   const summary = mode === 'swe' ? exp.sweSummary : exp.pmSummary
@@ -52,8 +54,8 @@ export default function ExperienceCard({ exp, mode }) {
       <div className={`h-1 w-full ${colors.stripe}`} />
 
       <div className="p-6 flex flex-col gap-3">
-        {/* Header: icon + org/title block | dates */}
-        <div className="flex items-start justify-between gap-4">
+        {/* Header */}
+        <div className={dateInHeader ? '' : 'flex items-start justify-between gap-4'}>
           <div className="flex items-start gap-3">
             {exp.iconUrl && (
               <div className="w-16 h-16 rounded-lg bg-white border border-border shrink-0 flex items-center justify-center overflow-hidden">
@@ -72,6 +74,11 @@ export default function ExperienceCard({ exp, mode }) {
               <h2 className="font-display text-base font-semibold text-ink dark:text-ink-dark leading-snug">
                 {exp.title}
               </h2>
+              {dateInHeader && (
+                <time className="text-xs text-ink-muted dark:text-ink-muted-dark font-mono">
+                  {exp.dates}
+                </time>
+              )}
               {exp.location && (
                 <p className="text-xs text-ink-muted dark:text-ink-muted-dark">
                   {exp.location}
@@ -79,9 +86,11 @@ export default function ExperienceCard({ exp, mode }) {
               )}
             </div>
           </div>
-          <time className="text-xs text-ink-muted dark:text-ink-muted-dark font-mono shrink-0 pt-0.5">
-            {exp.dates}
-          </time>
+          {!dateInHeader && (
+            <time className="text-xs text-ink-muted dark:text-ink-muted-dark font-mono shrink-0 pt-0.5">
+              {exp.dates}
+            </time>
+          )}
         </div>
 
         {/* One-line summary */}

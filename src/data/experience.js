@@ -16,6 +16,7 @@ export const experiences = [
     dates: 'May 2026 – Aug 2026',
     location: 'Menlo Park, CA',
     color: 'violet',
+    featured: true,
     iconUrl: '/experience/meta.avif',
     sweSummary:
       'Shipped an Android AI dating assistant into production, extended it to iOS parity, and ran 6 parallel workstreams across 15+ production areas.',
@@ -41,6 +42,7 @@ export const experiences = [
     dates: 'Jun 2025 – Aug 2025',
     location: 'Menlo Park, CA',
     color: 'violet',
+    featured: true,
     iconUrl: '/experience/meta.avif',
     sweSummary:
       'Shipped Strong Start, a 7-criteria refugee service search platform, in 5 weeks with 9,400+ LOC, 750+ commits, and 88 code reviews.',
@@ -63,6 +65,7 @@ export const experiences = [
     dates: 'Nov 2024 – Present',
     location: 'Washington, DC',
     color: 'teal',
+    featured: true,
     iconUrl: '/experience/homes-not-borders.jpg',
     sweSummary:
       'Built a full rent-assistance tracking platform in under 24 hours and iterated on caseworker feedback to serve 300+ refugee families.',

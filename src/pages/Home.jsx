@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import ExperienceStrip from '../components/home/ExperienceStrip'
 import ProjectStrip from '../components/home/ProjectStrip'
 
 export default function Home() {
@@ -19,7 +20,7 @@ export default function Home() {
 
         <div className="mt-8 flex flex-wrap gap-3">
           <Link
-            to="/projects"
+            to="/experience"
             className="inline-flex items-center px-5 py-2.5 rounded-lg bg-brand-violet text-white font-medium text-sm hover:bg-brand-violet-dark transition-colors focus-visible:outline-2 focus-visible:outline-brand-violet focus-visible:outline-offset-2"
           >
             See my work
@@ -32,6 +33,9 @@ export default function Home() {
           </a>
         </div>
       </section>
+
+      {/* Featured experience */}
+      <ExperienceStrip />
 
       {/* Featured projects */}
       <ProjectStrip />

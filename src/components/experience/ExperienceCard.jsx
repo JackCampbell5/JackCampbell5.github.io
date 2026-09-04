@@ -51,47 +51,47 @@ export default function ExperienceCard({ exp, mode }) {
       {/* Accent stripe */}
       <div className={`h-1 w-full ${colors.stripe}`} />
 
-      <div className="p-6 flex flex-col gap-2">
-        {/* Org row: icon + name | dates */}
-        <div className="flex items-center justify-between gap-4">
-          <div className="flex items-center gap-2">
+      <div className="p-6 flex flex-col gap-3">
+        {/* Header: icon + org/title block | dates */}
+        <div className="flex items-start justify-between gap-4">
+          <div className="flex items-start gap-3">
             {exp.iconUrl && (
-              <img
-                src={exp.iconUrl}
-                alt=""
-                aria-hidden="true"
-                className="w-5 h-5 rounded object-contain"
-              />
+              <div className="w-16 h-16 rounded-lg bg-white border border-border shrink-0 flex items-center justify-center overflow-hidden">
+                <img
+                  src={exp.iconUrl}
+                  alt=""
+                  aria-hidden="true"
+                  className="w-full h-full object-contain"
+                />
+              </div>
             )}
-            <span className={`text-xs font-semibold ${colors.label}`}>
-              {exp.org}
-            </span>
+            <div className="flex flex-col gap-0.5">
+              <span className={`text-xs font-semibold ${colors.label}`}>
+                {exp.org}
+              </span>
+              <h2 className="font-display text-base font-semibold text-ink dark:text-ink-dark leading-snug">
+                {exp.title}
+              </h2>
+              {exp.location && (
+                <p className="text-xs text-ink-muted dark:text-ink-muted-dark">
+                  {exp.location}
+                </p>
+              )}
+            </div>
           </div>
-          <time className="text-xs text-ink-muted dark:text-ink-muted-dark font-mono shrink-0">
+          <time className="text-xs text-ink-muted dark:text-ink-muted-dark font-mono shrink-0 pt-0.5">
             {exp.dates}
           </time>
         </div>
 
-        {/* Title */}
-        <h2 className="font-display text-lg font-semibold text-ink dark:text-ink-dark leading-snug">
-          {exp.title}
-        </h2>
-
-        {/* Location */}
-        {exp.location && (
-          <p className="text-xs text-ink-muted dark:text-ink-muted-dark">
-            {exp.location}
-          </p>
-        )}
-
         {/* One-line summary */}
-        <p className="text-sm text-ink-muted dark:text-ink-muted-dark leading-relaxed mt-1">
+        <p className="text-sm text-ink-muted dark:text-ink-muted-dark leading-relaxed">
           {summary}
         </p>
 
         {/* Expanded bullets */}
         {hasBullets && expanded && (
-          <ul className="mt-2 flex flex-col gap-2.5">
+          <ul className="mt-1 flex flex-col gap-2.5">
             {bullets.map((bullet, i) => (
               <li key={i} className="flex gap-2.5 items-start">
                 <span className={`${colors.bullet} mt-0.5 shrink-0 select-none`} aria-hidden="true">
@@ -109,7 +109,7 @@ export default function ExperienceCard({ exp, mode }) {
         {hasBullets && (
           <button
             onClick={() => setExpanded(e => !e)}
-            className={`self-start text-xs font-medium mt-1 focus-visible:outline-2 focus-visible:outline-offset-2 rounded-sm transition-colors ${colors.button}`}
+            className={`self-start text-xs font-medium focus-visible:outline-2 focus-visible:outline-offset-2 rounded-sm transition-colors ${colors.button}`}
           >
             {expanded ? 'Show less ↑' : 'Show more ↓'}
           </button>

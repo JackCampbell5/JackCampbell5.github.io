@@ -40,7 +40,7 @@ export const experiences = [
     title: 'Software Engineering Intern',
     dates: 'Jun 2025 – Aug 2025',
     location: 'Menlo Park, CA',
-    color: 'rose',
+    color: 'violet',
     iconUrl: '/experience/meta.avif',
     sweSummary:
       'Shipped Strong Start, a 7-criteria refugee service search platform, in 5 weeks with 9,400+ LOC, 750+ commits, and 88 code reviews.',
@@ -104,7 +104,7 @@ export const experiences = [
     title: 'CORE Intern',
     dates: 'Sep 2022 – Aug 2023',
     location: 'Gaithersburg, MD',
-    color: 'pink',
+    color: 'sky',
     iconUrl: '/experience/nist.png',
     sweSummary:
       'Launched a modular experiment-planning web tool that consolidated 3M+ compiled data points for neutron scattering research.',

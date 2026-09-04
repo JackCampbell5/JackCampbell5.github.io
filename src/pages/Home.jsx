@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import ProjectStrip from '../components/home/ProjectStrip'
 
 export default function Home() {
   return (
@@ -32,35 +33,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Selected projects — placeholder for Phase 2 */}
-      <section className="max-w-5xl mx-auto px-4 sm:px-6 py-16 border-t border-border dark:border-border-dark">
-        <h2 className="font-display text-2xl font-bold text-ink dark:text-ink-dark mb-8">
-          Selected projects
-        </h2>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {[1, 2, 3].map(n => (
-            <div
-              key={n}
-              className="rounded-xl border border-border dark:border-border-dark bg-surface dark:bg-surface-dark p-5 flex flex-col gap-3"
-            >
-              <div className="h-4 w-24 rounded bg-border dark:bg-border-dark animate-pulse" />
-              <div className="h-3 w-full rounded bg-border dark:bg-border-dark animate-pulse" />
-              <div className="h-3 w-3/4 rounded bg-border dark:bg-border-dark animate-pulse" />
-              <p className="text-xs text-ink-muted dark:text-ink-muted-dark mt-auto pt-2">
-                [ PROJECT PLACEHOLDER — content coming in Phase 2 ]
-              </p>
-            </div>
-          ))}
-        </div>
-        <div className="mt-8">
-          <Link
-            to="/projects"
-            className="text-sm text-brand-violet dark:text-brand-violet-light font-medium hover:underline focus-visible:outline-2 focus-visible:outline-brand-violet focus-visible:outline-offset-2 rounded-sm"
-          >
-            View all projects →
-          </Link>
-        </div>
-      </section>
+      {/* Featured projects */}
+      <ProjectStrip />
 
       {/* Photo strip — placeholder for Phase 3 */}
       <section className="max-w-5xl mx-auto px-4 sm:px-6 py-16 border-t border-border dark:border-border-dark">
@@ -70,7 +44,7 @@ export default function Home() {
         <p className="text-ink-muted dark:text-ink-muted-dark mb-8 text-sm">
           Canon EOS R50 — landscapes and sunsets
         </p>
-        <div className="flex gap-3 overflow-hidden rounded-xl">
+        <div className="flex gap-3 overflow-hidden">
           {[1, 2, 3, 4].map(n => (
             <div
               key={n}
@@ -139,7 +113,7 @@ export default function Home() {
           >
             LinkedIn
           </a>
-          {/* Resume link — replace href with real Google Drive URL (Batch C) */}
+          {/* Replace href with real Google Drive resume URL (Batch C) */}
           <a
             href="#"
             aria-disabled="true"

@@ -1,4 +1,5 @@
 import { skills } from '../data/skills'
+import { RESUME_SWE, RESUME_PM } from '../data/links'
 
 export default function About() {
   return (
@@ -35,15 +36,22 @@ export default function About() {
             Open to full-time roles — graduating May 2027.
           </p>
 
-          {/* Resume link — replace href with real Google Drive URL (Batch C) */}
-          <div className="mt-2">
+          <div className="mt-2 flex flex-wrap gap-3">
             <a
-              href="#"
-              aria-disabled="true"
-              className="inline-flex items-center px-5 py-2.5 rounded-lg bg-brand-violet text-white font-medium text-sm opacity-50 cursor-not-allowed"
-              tabIndex={-1}
+              href={RESUME_SWE}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-5 py-2.5 rounded-lg bg-brand-violet text-white font-medium text-sm hover:bg-brand-violet-dark transition-colors focus-visible:outline-2 focus-visible:outline-brand-violet focus-visible:outline-offset-2"
             >
-              Resume (link coming soon)
+              Resume — SWE
+            </a>
+            <a
+              href={RESUME_PM}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-5 py-2.5 rounded-lg border border-brand-violet text-brand-violet dark:text-brand-violet-light dark:border-brand-violet-light font-medium text-sm hover:bg-brand-violet hover:text-white dark:hover:bg-brand-violet-light dark:hover:text-ink transition-colors focus-visible:outline-2 focus-visible:outline-brand-violet focus-visible:outline-offset-2"
+            >
+              Resume — PM
             </a>
           </div>
 

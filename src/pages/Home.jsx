@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { EMAIL, EMAIL_COMPOSE, RESUME_SWE, RESUME_PM } from "../data/links";
 import ExperienceCard from "../components/experience/ExperienceCard";
 import ProjectCard from "../components/projects/ProjectCard";
 import { experiences } from "../data/experience";
@@ -60,7 +61,9 @@ export default function Home() {
             See my work
           </Link>
           <a
-            href="mailto:jackbcampbell15@gmail.com"
+            href={EMAIL_COMPOSE}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center px-5 py-2.5 rounded-lg border border-border dark:border-border-dark text-ink-muted dark:text-ink-muted-dark font-medium text-sm hover:border-brand-violet hover:text-brand-violet dark:hover:border-brand-violet-light dark:hover:text-brand-violet-light transition-colors focus-visible:outline-2 focus-visible:outline-brand-violet focus-visible:outline-offset-2"
           >
             Get in touch
@@ -207,10 +210,10 @@ export default function Home() {
         </h2>
         <div className="flex flex-wrap gap-4">
           <a
-            href="mailto:jackbcampbell15@gmail.com"
+            href={`mailto:${EMAIL}`}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-border dark:border-border-dark text-sm text-ink-muted dark:text-ink-muted-dark hover:border-brand-violet hover:text-brand-violet dark:hover:border-brand-violet-light dark:hover:text-brand-violet-light transition-colors focus-visible:outline-2 focus-visible:outline-brand-violet focus-visible:outline-offset-2"
           >
-            jackbcampbell15@gmail.com
+            {EMAIL}
           </a>
           <a
             href="https://github.com/JackCampbell5"
@@ -229,11 +232,20 @@ export default function Home() {
             LinkedIn
           </a>
           <a
-            href="#"
-            aria-disabled="true"
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-dashed border-border dark:border-border-dark text-sm text-ink-muted dark:text-ink-muted-dark opacity-50 cursor-not-allowed"
+            href={RESUME_SWE}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-border dark:border-border-dark text-sm text-ink-muted dark:text-ink-muted-dark hover:border-brand-violet hover:text-brand-violet dark:hover:border-brand-violet-light dark:hover:text-brand-violet-light transition-colors focus-visible:outline-2 focus-visible:outline-brand-violet focus-visible:outline-offset-2"
           >
-            Resume (coming soon)
+            Resume (SWE)
+          </a>
+          <a
+            href={RESUME_PM}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-border dark:border-border-dark text-sm text-ink-muted dark:text-ink-muted-dark hover:border-brand-violet hover:text-brand-violet dark:hover:border-brand-violet-light dark:hover:text-brand-violet-light transition-colors focus-visible:outline-2 focus-visible:outline-brand-violet focus-visible:outline-offset-2"
+          >
+            Resume (PM)
           </a>
         </div>
       </section>

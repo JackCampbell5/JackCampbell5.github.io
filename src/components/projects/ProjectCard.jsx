@@ -45,7 +45,7 @@ const colorMap = {
   },
 }
 
-export default function ProjectCard({ project }) {
+export default function ProjectCard({ project, dateBelow = false }) {
   const [expanded, setExpanded] = useState(false)
   const hasBullets = project.bullets && project.bullets.length > 0
   const hasLinks = project.liveUrl || (project.repoUrl && project.repoPublic)
@@ -74,11 +74,16 @@ export default function ProjectCard({ project }) {
           </p>
         )}
 
-        <div className="flex items-start justify-between gap-3">
+        <div className={dateBelow ? '' : 'flex items-start justify-between gap-3'}>
           <h2 className="font-display text-lg font-semibold text-ink dark:text-ink-dark leading-snug">
             {project.name}
           </h2>
-          {project.dates && (
+          {project.dates && dateBelow && (
+            <span className="text-xs text-ink-muted dark:text-ink-muted-dark font-mono">
+              {project.dates}
+            </span>
+          )}
+          {project.dates && !dateBelow && (
             <span className="text-xs text-ink-muted dark:text-ink-muted-dark font-mono shrink-0 pt-1">
               {project.dates}
             </span>

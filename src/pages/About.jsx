@@ -94,7 +94,7 @@ export default function About() {
           <img
             src="/headshot-square.png"
             alt="Jack Campbell"
-            className="w-40 h-40 rounded-xl object-cover mb-8"
+            className="w-40 h-40 rounded-xl object-cover mb-8 mx-auto lg:mx-0"
           />
           <h2 className="font-display text-lg font-semibold text-ink dark:text-ink-dark mb-5">
             Skills

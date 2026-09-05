@@ -40,7 +40,7 @@ export default function Home() {
   return (
     <div>
       {/* Hero */}
-      <section className="max-w-5xl mx-auto px-4 sm:px-6 pt-20 pb-16">
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 pt-12 sm:pt-20 pb-16">
         <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight text-ink dark:text-ink-dark max-w-3xl">
           Software engineer drawn to the gap between the tool you have and the
           tool you need.

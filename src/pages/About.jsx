@@ -3,13 +3,12 @@ import { skills } from '../data/skills'
 export default function About() {
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 py-16">
-      <h1 className="font-display text-4xl font-bold text-ink dark:text-ink-dark mb-10">
-        About
-      </h1>
-
       <div className="grid lg:grid-cols-3 gap-12">
         {/* Bio + education */}
         <div className="lg:col-span-2 flex flex-col gap-5">
+          <h1 className="font-display text-4xl font-bold text-ink dark:text-ink-dark">
+            About
+          </h1>
           <p className="text-ink dark:text-ink-dark leading-relaxed">
             Software engineer, drawn to problems nobody is working on yet and the gap between the
             tool you have vs the tool you need. Experience working for organizations without a
@@ -84,6 +83,11 @@ export default function About() {
 
         {/* Skills sidebar */}
         <aside>
+          <img
+            src="/headshot-square.png"
+            alt="Jack Campbell"
+            className="w-40 h-40 rounded-xl object-cover mb-8"
+          />
           <h2 className="font-display text-lg font-semibold text-ink dark:text-ink-dark mb-5">
             Skills
           </h2>

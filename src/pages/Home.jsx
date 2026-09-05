@@ -116,17 +116,24 @@ export default function Home() {
 
       {/* About snippet */}
       <section className="max-w-5xl mx-auto px-4 sm:px-6 py-16 border-t border-border dark:border-border-dark">
-        <h2 className="font-display text-2xl font-bold text-ink dark:text-ink-dark mb-4">
+        <h2 className="font-display text-2xl font-bold text-ink dark:text-ink-dark mb-6">
           About
         </h2>
-        <p className="text-ink-muted dark:text-ink-muted-dark max-w-2xl leading-relaxed">
-          CS senior at the University of Maryland (ML concentration). I've
-          worked with organizations that didn't have a software team behind them
-          — refugees at Homes Not Borders, scientists at NIST, caseworkers
-          tracking services in a spreadsheet. Two summers at Meta taught the
-          other half: the discipline that keeps quality from slipping as volume
-          goes up.
-        </p>
+        <div className="flex flex-col sm:flex-row gap-8 items-start">
+          <img
+            src="/headshot-square.png"
+            alt="Jack Campbell"
+            className="w-40 h-40 rounded-xl object-cover shrink-0"
+          />
+          <p className="text-ink-muted dark:text-ink-muted-dark max-w-2xl leading-relaxed">
+            CS senior at the University of Maryland (ML concentration). I've
+            worked with organizations that didn't have a software team behind them
+            — refugees at Homes Not Borders, scientists at NIST, caseworkers
+            tracking services in a spreadsheet. Two summers at Meta taught the
+            other half: the discipline that keeps quality from slipping as volume
+            goes up.
+          </p>
+        </div>
         <div className="mt-6">
           <Link
             to="/about"

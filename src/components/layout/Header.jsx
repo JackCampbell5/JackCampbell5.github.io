@@ -14,9 +14,17 @@ export default function Header() {
       <nav className="max-w-5xl mx-auto px-4 sm:px-6 py-4 flex items-center gap-6" aria-label="Main navigation">
         <NavLink
           to="/"
-          className="font-display font-bold text-xl text-brand-violet dark:text-brand-violet-light shrink-0 focus-visible:outline-2 focus-visible:outline-brand-violet focus-visible:outline-offset-2 rounded-sm"
+          className="flex items-center gap-2.5 shrink-0 focus-visible:outline-2 focus-visible:outline-brand-violet focus-visible:outline-offset-2 rounded-sm"
         >
-          Jack Campbell
+          <img
+            src="/headshot-circle.png"
+            alt=""
+            aria-hidden="true"
+            className="w-8 h-8 rounded-full object-cover"
+          />
+          <span className="font-display font-bold text-xl text-brand-violet dark:text-brand-violet-light">
+            Jack Campbell
+          </span>
         </NavLink>
 
         <div className="flex-1 flex items-center justify-end gap-1 sm:gap-2">

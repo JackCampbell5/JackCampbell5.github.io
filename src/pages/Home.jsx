@@ -1,15 +1,41 @@
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import ExperienceCard from "../components/experience/ExperienceCard";
 import ProjectCard from "../components/projects/ProjectCard";
 import { experiences } from "../data/experience";
 import { projects } from "../data/projects";
+import photosData from "../data/photos.json";
+import Lightbox from "../components/gallery/Lightbox";
 
 const homeExperiences = ["meta-2026", "nist-2024"].map((id) =>
   experiences.find((e) => e.id === id),
 );
 const homeProject = projects.find((p) => p.id === "co-pilot");
 
+const HIGHLIGHT_IDS = [
+  "landscapes-Redwood National Park-20250705_204827",
+  "landscapes-Yosemite National Park-20250527_095111",
+  "landscapes-Arizona-20230712_190237",
+  "landscapes-lassen volcanic national park-IMG_4802",
+];
+const highlightPhotos = HIGHLIGHT_IDS.map((id) =>
+  photosData.find((p) => p.id === id),
+).filter(Boolean);
+
 export default function Home() {
+  const [lightboxIndex, setLightboxIndex] = useState(null)
+
+  useEffect(() => {
+    if (lightboxIndex === null) return
+    const handler = e => {
+      if (e.key === 'ArrowRight') setLightboxIndex(i => Math.min(i + 1, highlightPhotos.length - 1))
+      if (e.key === 'ArrowLeft')  setLightboxIndex(i => Math.max(i - 1, 0))
+      if (e.key === 'Escape')     setLightboxIndex(null)
+    }
+    window.addEventListener('keydown', handler)
+    return () => window.removeEventListener('keydown', handler)
+  }, [lightboxIndex])
+
   return (
     <div>
       {/* Hero */}
@@ -86,25 +112,45 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Photo strip — placeholder for Phase 3 */}
+      {/* Photo strip */}
       <section className="max-w-5xl mx-auto px-4 sm:px-6 py-16 border-t border-border dark:border-border-dark">
-        <h2 className="font-display text-2xl font-bold text-ink dark:text-ink-dark mb-2">
+        <h2 className="font-display text-2xl font-bold text-ink dark:text-ink-dark mb-8">
           Photography
         </h2>
-        <p className="text-ink-muted dark:text-ink-muted-dark mb-8 text-sm">
-          Canon EOS R50 — landscapes and sunsets
-        </p>
-        <div className="flex gap-3 overflow-hidden">
-          {[1, 2, 3, 4].map((n) => (
-            <div
-              key={n}
-              className="flex-1 aspect-square rounded-lg bg-surface dark:bg-surface-dark border border-border dark:border-border-dark flex items-center justify-center text-xs text-ink-muted dark:text-ink-muted-dark"
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+          {highlightPhotos.map((photo, i) => (
+            <button
+              key={photo.id}
+              onClick={() => setLightboxIndex(i)}
+              className="group text-left cursor-zoom-in focus-visible:outline-2 focus-visible:outline-brand-violet focus-visible:outline-offset-2 rounded-xl"
+              aria-label={`Open photo: ${photo.location}`}
             >
-              Photo {n}
-            </div>
+              <div className="aspect-[3/4] rounded-xl overflow-hidden bg-surface dark:bg-surface-dark relative">
+                <img
+                  src={photo.src.jpeg[0]}
+                  alt=""
+                  loading="lazy"
+                  width={photo.width}
+                  height={photo.height}
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/75 to-transparent px-3 pt-8 pb-3">
+                  <p className="text-xs font-semibold text-white capitalize leading-snug">
+                    {photo.location}
+                  </p>
+                  <p className="text-xs text-white/65 font-mono mt-0.5">
+                    {new Date(photo.dateTaken).toLocaleDateString("en-US", {
+                      month: "long",
+                      day: "numeric",
+                      year: "numeric",
+                    })}
+                  </p>
+                </div>
+              </div>
+            </button>
           ))}
         </div>
-        <div className="mt-4">
+        <div className="mt-6">
           <Link
             to="/photos"
             className="text-sm text-brand-violet dark:text-brand-violet-light font-medium hover:underline focus-visible:outline-2 focus-visible:outline-brand-violet focus-visible:outline-offset-2 rounded-sm"
@@ -113,6 +159,16 @@ export default function Home() {
           </Link>
         </div>
       </section>
+
+      {lightboxIndex !== null && (
+        <Lightbox
+          photos={highlightPhotos}
+          index={lightboxIndex}
+          onClose={() => setLightboxIndex(null)}
+          onPrev={() => setLightboxIndex(i => Math.max(i - 1, 0))}
+          onNext={() => setLightboxIndex(i => Math.min(i + 1, highlightPhotos.length - 1))}
+        />
+      )}
 
       {/* About snippet */}
       <section className="max-w-5xl mx-auto px-4 sm:px-6 py-16 border-t border-border dark:border-border-dark">

@@ -23,16 +23,16 @@ export const experiences = [
     pmSummary:
       'Owned AI feature development end-to-end, from scoping and XFN alignment with data science and design through A/B experimentation and fallback tradeoffs.',
     sweBullets: [
-      'Owned the Android launch of an AI dating assistant in Facebook Dating and brought it to iOS parity and extended it with net-new capabilities across 15+ production areas, by leveraging AI tools to accomplish 6 tasks simultaneously.',
-      'Designed an ML feature from the ground up for 10+ surfaces, owning the framing and fallback tradeoffs.',
-      'Owned experiment design for 2 profile surfaces, defining north-star and guardrail metrics with XFN data science and design.',
-      "Caught and fixed a silent data-loss bug in a teammate's feature mid-rollout that permanently deleted photos on reorder.",
-    ],
-    pmBullets: [
       'AI Feature Development: Designed and implemented an AI-powered Dating Assistant for Facebook Dating on Android by leveraging AI tools to accomplish 6 tasks simultaneously.',
       'Applied ML Design: Designed an ML feature from the ground up for 10+ surfaces, owning framing and fallback tradeoffs.',
       'Proactive Project Design: Independently scoped, designed, and implemented additional full-stack project improving tooling.',
       'Cross-functional Collaboration: Partnered with XFN designers to design, prototype, and A/B multiple new user experiences.',
+    ],
+    pmBullets: [
+      'Owned the Android launch of an AI dating assistant in Facebook Dating and brought it to iOS parity and extended it with net-new capabilities across 15+ production areas, by leveraging AI tools to accomplish 6 tasks simultaneously.',
+      'Designed an ML feature from the ground up for 10+ surfaces, owning the framing and fallback tradeoffs.',
+      'Owned experiment design for 2 profile surfaces, defining north-star and guardrail metrics with XFN data science and design.',
+      "Caught and fixed a silent data-loss bug in a teammate's feature mid-rollout that permanently deleted photos on reorder.",
     ],
   },
   {
@@ -49,13 +49,13 @@ export const experiences = [
     pmSummary:
       'Defined requirements directly with nonprofit caseworkers, then delivered a production platform that cut service-search time 40% across the DC metro.',
     sweBullets: [
-      'Defined requirements with nonprofit caseworkers and shipped Strong Start, turning an informal referral process into a structured 7-criteria search that cut time-to-find-a-service 40% across the DC metro.',
-      'Produced 9,400+ LOC, 750+ commits, and 88 code reviews in 5 weeks.',
-    ],
-    pmBullets: [
       'Scalable Platform Development: Designed and delivered Strong Start, a production-ready platform connecting refugees with nonprofit services across 7+ criteria, serving refugees across the DC metro area.',
       'High-velocity Engineering Execution: Produced 9,400+ LOC, 750+ commits, and 88 code reviews in 5 weeks.',
       'Technical & Social Impact: Cut service search time by 40%, streamlining access to essential resources for refugees.',
+    ],
+    pmBullets: [
+      'Defined requirements with nonprofit caseworkers and shipped Strong Start, turning an informal referral process into a structured 7-criteria search that cut time-to-find-a-service 40% across the DC metro.',
+      'Produced 9,400+ LOC, 750+ commits, and 88 code reviews in 5 weeks.',
     ],
   },
   {
@@ -72,12 +72,12 @@ export const experiences = [
     pmSummary:
       'Scoped an undefined problem, ran stakeholder discovery, and shipped two multilingual tools that accelerated case processing by 75%.',
     sweBullets: [
-      'Handed an unscoped problem, shipped a full rent-assistance platform in under 24 hours in continuous contact with caseworkers, then iterated on their feedback serving 300+ families.',
-      'Ran stakeholder discovery to establish requirements for mentor-matching tool and shipped tool matching mentors 30% faster.',
-    ],
-    pmBullets: [
       'Systems Development: Built and deployed a rent-assistance tracking system serving 300+ refugee families, accelerating case processing speed by 75%.',
       'Multilingual Tooling: Developed a mentor-matching platform in multiple languages that enabled mentor matches 30% faster.',
+    ],
+    pmBullets: [
+      'Handed an unscoped problem, shipped a full rent-assistance platform in under 24 hours in continuous contact with caseworkers, then iterated on their feedback serving 300+ families.',
+      'Ran stakeholder discovery to establish requirements for mentor-matching tool and shipped tool matching mentors 30% faster.',
     ],
   },
   {
@@ -87,18 +87,19 @@ export const experiences = [
     dates: 'May 2024 – Aug 2024',
     location: 'Gaithersburg, MD',
     color: 'sky',
+    featured: true,
     iconUrl: '/experience/nist.png',
     sweSummary:
       'Led an LLM application for multimillion-dollar neutron instruments with script creation time down 25% and a functional prototype delivered in 8 weeks under budget.',
     pmSummary:
       'Drove AI adoption in a skeptical scientific organization, reconciling conflicting stakeholders and presenting results to 50+ domain experts at an international workshop.',
     sweBullets: [
-      'Led development of an LLM application for operating multimillion-dollar neutron instruments with no prior expertise, reconciling conflicting stakeholder opinions as requirements shifted. Script creation time down 25%, prototype in 8 weeks, under budget.',
-      'Built buy-in across a skeptical scientific audience with presentations to 50+ internal AI experts and an international workshop.',
-    ],
-    pmBullets: [
       'AI Instrument Control: Led development of an LLM-based application to operate multimillion-dollar neutron scattering instruments, reducing control script creation time by 25%. Delivered functional prototype under budget in 8 weeks.',
       'Technical Presentations: Presented results to 50+ NIST AI Community of Interest Members and at international AI for Materials Science Workshop, increasing visibility of AI adoption in nuclear physics labs.',
+    ],
+    pmBullets: [
+      'Led development of an LLM application for operating multimillion-dollar neutron instruments with no prior expertise, reconciling conflicting stakeholder opinions as requirements shifted. Script creation time down 25%, prototype in 8 weeks, under budget.',
+      'Built buy-in across a skeptical scientific audience with presentations to 50+ internal AI experts and an international workshop.',
     ],
   },
   {
@@ -114,10 +115,10 @@ export const experiences = [
     pmSummary:
       'Designed and shipped a research-access tool that lowered the barrier to entry for neutron scattering experiments.',
     sweBullets: [
-      'Launched modular experiment-planning web tool serving 3M+ compiled data points, lowering the entry barrier for research.',
+      'Scientific Tool Development: Designed and launched a modular experiment-planning web tool serving 3M+ compiled data points, lowering the entry barrier for neutron scattering research.',
     ],
     pmBullets: [
-      'Scientific Tool Development: Designed and launched a modular experiment-planning web tool serving 3M+ compiled data points, lowering the entry barrier for neutron scattering research.',
+      'Launched modular experiment-planning web tool serving 3M+ compiled data points, lowering the entry barrier for research.',
     ],
   },
   {

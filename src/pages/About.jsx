@@ -32,7 +32,7 @@ export default function About() {
             to get people outdoors. Always up for a conversation; reach out anytime.
           </p>
 
-          <p className="mt-2 font-medium text-brand-violet dark:text-brand-violet-light">
+          <p className="mt-2 font-medium text-brand-pink dark:text-brand-pink-light">
             Open to full-time roles — graduating May 2027.
           </p>
 
@@ -41,7 +41,7 @@ export default function About() {
               href={RESUME_SWE}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-5 py-2.5 rounded-lg bg-brand-violet text-white font-medium text-sm hover:bg-brand-violet-dark transition-colors focus-visible:outline-2 focus-visible:outline-brand-violet focus-visible:outline-offset-2"
+              className="inline-flex items-center px-5 py-2.5 rounded-lg bg-brand-pink text-white font-medium text-sm hover:bg-brand-pink-dark transition-colors focus-visible:outline-2 focus-visible:outline-brand-pink focus-visible:outline-offset-2"
             >
               Resume — SWE
             </a>
@@ -49,7 +49,7 @@ export default function About() {
               href={RESUME_PM}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-5 py-2.5 rounded-lg border border-brand-violet text-brand-violet dark:text-brand-violet-light dark:border-brand-violet-light font-medium text-sm hover:bg-brand-violet hover:text-white dark:hover:bg-brand-violet-light dark:hover:text-ink transition-colors focus-visible:outline-2 focus-visible:outline-brand-violet focus-visible:outline-offset-2"
+              className="inline-flex items-center px-5 py-2.5 rounded-lg border border-brand-pink text-brand-pink dark:text-brand-pink-light dark:border-brand-pink-light font-medium text-sm hover:bg-brand-pink hover:text-white dark:hover:bg-brand-pink-light dark:hover:text-ink transition-colors focus-visible:outline-2 focus-visible:outline-brand-pink focus-visible:outline-offset-2"
             >
               Resume — PM
             </a>
@@ -72,7 +72,7 @@ export default function About() {
               <p className="text-sm text-ink-muted dark:text-ink-muted-dark">
                 B.S. Computer Science — Machine Learning Concentration
               </p>
-              <p className="text-sm text-brand-violet dark:text-brand-violet-light font-medium">
+              <p className="text-sm text-brand-pink dark:text-brand-pink-light font-medium">
                 GPA 3.93 / 4.0
               </p>
               <div className="mt-2 flex flex-wrap gap-2">

@@ -12,7 +12,7 @@ function PhotoTile({ photo, onClick }) {
   return (
     <button
       onClick={onClick}
-      className="block w-full mb-3 break-inside-avoid rounded-lg overflow-hidden cursor-zoom-in relative group focus-visible:outline-2 focus-visible:outline-brand-violet focus-visible:outline-offset-2"
+      className="block w-full mb-3 break-inside-avoid rounded-lg overflow-hidden cursor-zoom-in relative group focus-visible:outline-2 focus-visible:outline-brand-pink focus-visible:outline-offset-2"
       aria-label="Open photo"
     >
       <div
@@ -76,9 +76,9 @@ function FilterDropdown({ options, selected, onChange }) {
     <div ref={ref} className="relative">
       <button
         onClick={() => setOpen(o => !o)}
-        className={`flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-medium border transition-colors focus-visible:outline-2 focus-visible:outline-brand-violet focus-visible:outline-offset-2 ${
+        className={`flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-medium border transition-colors focus-visible:outline-2 focus-visible:outline-brand-pink focus-visible:outline-offset-2 ${
           selected.size > 0
-            ? 'bg-brand-violet text-white border-brand-violet'
+            ? 'bg-brand-pink text-white border-brand-pink'
             : 'bg-surface dark:bg-surface-dark border-border dark:border-border-dark text-ink-muted dark:text-ink-muted-dark hover:text-ink dark:hover:text-ink-dark'
         }`}
       >
@@ -94,7 +94,7 @@ function FilterDropdown({ options, selected, onChange }) {
               placeholder="Search locations…"
               value={search}
               onChange={e => setSearch(e.target.value)}
-              className="w-full px-3 py-1.5 text-sm bg-surface dark:bg-surface-dark border border-border dark:border-border-dark rounded-lg text-ink dark:text-ink-dark placeholder:text-ink-muted dark:placeholder:text-ink-muted-dark focus:outline-none focus:border-brand-violet"
+              className="w-full px-3 py-1.5 text-sm bg-surface dark:bg-surface-dark border border-border dark:border-border-dark rounded-lg text-ink dark:text-ink-dark placeholder:text-ink-muted dark:placeholder:text-ink-muted-dark focus:outline-none focus:border-brand-pink"
               autoFocus
             />
           </div>
@@ -110,7 +110,7 @@ function FilterDropdown({ options, selected, onChange }) {
                   type="checkbox"
                   checked={selected.has(option)}
                   onChange={() => toggle(option)}
-                  className="accent-brand-violet w-3.5 h-3.5 shrink-0"
+                  className="accent-brand-pink w-3.5 h-3.5 shrink-0"
                 />
                 <span className="text-sm text-ink dark:text-ink-dark">{option}</span>
               </label>
@@ -120,7 +120,7 @@ function FilterDropdown({ options, selected, onChange }) {
             <div className="p-2 border-t border-border dark:border-border-dark">
               <button
                 onClick={() => { onChange(new Set()); setSearch('') }}
-                className="w-full text-xs text-ink-muted dark:text-ink-muted-dark hover:text-brand-violet dark:hover:text-brand-violet-light transition-colors"
+                className="w-full text-xs text-ink-muted dark:text-ink-muted-dark hover:text-brand-pink dark:hover:text-brand-pink-light transition-colors"
               >
                 Clear all
               </button>
@@ -204,7 +204,7 @@ export default function Photos() {
                 <button
                   key={order}
                   onClick={() => setSortOrder(order)}
-                  className={`px-3 py-1 rounded-md capitalize transition-colors focus-visible:outline-2 focus-visible:outline-brand-violet focus-visible:outline-offset-2 ${
+                  className={`px-3 py-1 rounded-md capitalize transition-colors focus-visible:outline-2 focus-visible:outline-brand-pink focus-visible:outline-offset-2 ${
                     sortOrder === order
                       ? 'text-ink dark:text-ink-dark font-medium'
                       : 'text-ink-muted dark:text-ink-muted-dark hover:text-ink dark:hover:text-ink-dark'

@@ -22,9 +22,9 @@ export default function Experience() {
       >
         <button
           onClick={() => setMode('swe')}
-          className={`px-4 py-1.5 rounded-md text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-brand-violet focus-visible:outline-offset-1 ${
+          className={`px-4 py-1.5 rounded-md text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-brand-pink focus-visible:outline-offset-1 ${
             mode === 'swe'
-              ? 'bg-brand-violet text-white'
+              ? 'bg-brand-pink text-white'
               : 'text-ink-muted dark:text-ink-muted-dark hover:text-ink dark:hover:text-ink-dark'
           }`}
         >
@@ -32,9 +32,9 @@ export default function Experience() {
         </button>
         <button
           onClick={() => setMode('pm')}
-          className={`px-4 py-1.5 rounded-md text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-brand-violet focus-visible:outline-offset-1 ${
+          className={`px-4 py-1.5 rounded-md text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-brand-pink focus-visible:outline-offset-1 ${
             mode === 'pm'
-              ? 'bg-brand-violet text-white'
+              ? 'bg-brand-pink text-white'
               : 'text-ink-muted dark:text-ink-muted-dark hover:text-ink dark:hover:text-ink-dark'
           }`}
         >

@@ -38,7 +38,7 @@ export default function Header() {
         {/* Logo */}
         <NavLink
           to="/"
-          className="flex items-center gap-2.5 shrink-0 focus-visible:outline-2 focus-visible:outline-brand-violet focus-visible:outline-offset-2 rounded-sm"
+          className="flex items-center gap-2.5 shrink-0 focus-visible:outline-2 focus-visible:outline-brand-pink focus-visible:outline-offset-2 rounded-sm"
         >
           <img
             src="/headshot-circle.png"
@@ -46,7 +46,7 @@ export default function Header() {
             aria-hidden="true"
             className="w-8 h-8 rounded-full object-cover"
           />
-          <span className="font-display font-bold text-xl text-brand-violet dark:text-brand-violet-light">
+          <span className="font-display font-bold text-xl text-brand-pink dark:text-brand-pink-light">
             Jack Campbell
           </span>
         </NavLink>
@@ -58,9 +58,9 @@ export default function Header() {
               key={to}
               to={to}
               className={({ isActive }) =>
-                `px-3 py-1.5 rounded-md text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-brand-violet focus-visible:outline-offset-2 ${
+                `px-3 py-1.5 rounded-md text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-brand-pink focus-visible:outline-offset-2 ${
                   isActive
-                    ? 'text-brand-violet dark:text-brand-violet-light bg-surface dark:bg-surface-dark'
+                    ? 'text-brand-pink dark:text-brand-pink-light bg-surface dark:bg-surface-dark'
                     : 'text-ink-muted dark:text-ink-muted-dark hover:text-ink dark:hover:text-ink-dark hover:bg-surface dark:hover:bg-surface-dark'
                 }`
               }
@@ -78,7 +78,7 @@ export default function Header() {
             onClick={() => setMenuOpen(o => !o)}
             aria-label={menuOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={menuOpen}
-            className="p-2 rounded-lg text-ink-muted dark:text-ink-muted-dark hover:text-ink dark:hover:text-ink-dark hover:bg-surface dark:hover:bg-surface-dark transition-colors focus-visible:outline-2 focus-visible:outline-brand-violet focus-visible:outline-offset-2"
+            className="p-2 rounded-lg text-ink-muted dark:text-ink-muted-dark hover:text-ink dark:hover:text-ink-dark hover:bg-surface dark:hover:bg-surface-dark transition-colors focus-visible:outline-2 focus-visible:outline-brand-pink focus-visible:outline-offset-2"
           >
             {menuOpen ? <CloseIcon /> : <MenuIcon />}
           </button>
@@ -95,7 +95,7 @@ export default function Header() {
               className={({ isActive }) =>
                 `px-3 py-3 rounded-lg text-sm font-medium transition-colors ${
                   isActive
-                    ? 'text-brand-violet dark:text-brand-violet-light'
+                    ? 'text-brand-pink dark:text-brand-pink-light'
                     : 'text-ink-muted dark:text-ink-muted-dark'
                 }`
               }

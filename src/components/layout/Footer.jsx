@@ -6,7 +6,7 @@ export default function Footer() {
         <div className="flex items-center gap-5">
           <a
             href="mailto:jackbcampbell15@gmail.com"
-            className="hover:text-brand-violet dark:hover:text-brand-violet-light transition-colors focus-visible:outline-2 focus-visible:outline-brand-violet focus-visible:outline-offset-2 rounded-sm"
+            className="hover:text-brand-pink dark:hover:text-brand-pink-light transition-colors focus-visible:outline-2 focus-visible:outline-brand-pink focus-visible:outline-offset-2 rounded-sm"
           >
             Email
           </a>
@@ -14,7 +14,7 @@ export default function Footer() {
             href="https://github.com/JackCampbell5"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-brand-violet dark:hover:text-brand-violet-light transition-colors focus-visible:outline-2 focus-visible:outline-brand-violet focus-visible:outline-offset-2 rounded-sm"
+            className="hover:text-brand-pink dark:hover:text-brand-pink-light transition-colors focus-visible:outline-2 focus-visible:outline-brand-pink focus-visible:outline-offset-2 rounded-sm"
           >
             GitHub
           </a>
@@ -22,7 +22,7 @@ export default function Footer() {
             href="https://linkedin.com/in/jackcampbell5"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-brand-violet dark:hover:text-brand-violet-light transition-colors focus-visible:outline-2 focus-visible:outline-brand-violet focus-visible:outline-offset-2 rounded-sm"
+            className="hover:text-brand-pink dark:hover:text-brand-pink-light transition-colors focus-visible:outline-2 focus-visible:outline-brand-pink focus-visible:outline-offset-2 rounded-sm"
           >
             LinkedIn
           </a>

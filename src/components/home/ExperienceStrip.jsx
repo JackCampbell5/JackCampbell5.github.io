@@ -18,7 +18,7 @@ export default function ExperienceStrip() {
       <div className="mt-8">
         <Link
           to="/experience"
-          className="text-sm text-brand-violet dark:text-brand-violet-light font-medium hover:underline focus-visible:outline-2 focus-visible:outline-brand-violet focus-visible:outline-offset-2 rounded-sm"
+          className="text-sm text-brand-pink dark:text-brand-pink-light font-medium hover:underline focus-visible:outline-2 focus-visible:outline-brand-pink focus-visible:outline-offset-2 rounded-sm"
         >
           View all experience →
         </Link>

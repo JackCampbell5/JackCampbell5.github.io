@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# Unlisted linktree page — reachable from the "All my links" button on the
+# homepage, but deliberately kept out of search results.
+Disallow: /links

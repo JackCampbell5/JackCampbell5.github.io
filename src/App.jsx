@@ -7,6 +7,7 @@ import Projects from './pages/Projects'
 import Experience from './pages/Experience'
 import Photos from './pages/Photos'
 import About from './pages/About'
+import Links from './pages/Links'
 import NotFound from './pages/NotFound'
 
 function ScrollToTop() {
@@ -21,6 +22,10 @@ export default function App() {
       <BrowserRouter>
         <ScrollToTop />
         <Routes>
+          {/* Unlisted linktree page — deliberately outside Layout so it renders
+              standalone, with no site header or footer. Not in the nav. */}
+          <Route path="/links" element={<Links />} />
+
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="projects" element={<Projects />} />

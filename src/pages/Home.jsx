@@ -1,6 +1,13 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { EMAIL, EMAIL_COMPOSE, RESUME_SWE, RESUME_PM } from "../data/links";
+import {
+  EMAIL,
+  EMAIL_COMPOSE,
+  RESUME_SWE,
+  RESUME_PM,
+  GITHUB,
+  LINKEDIN,
+} from "../data/links";
 import ExperienceCard from "../components/experience/ExperienceCard";
 import ProjectCard from "../components/projects/ProjectCard";
 import { experiences } from "../data/experience";
@@ -218,7 +225,7 @@ export default function Home() {
             {EMAIL}
           </a>
           <a
-            href="https://github.com/JackCampbell5"
+            href={GITHUB}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-border dark:border-border-dark text-sm text-ink-muted dark:text-ink-muted-dark hover:border-brand-pink hover:text-brand-pink dark:hover:border-brand-pink-light dark:hover:text-brand-pink-light transition-colors focus-visible:outline-2 focus-visible:outline-brand-pink focus-visible:outline-offset-2"
@@ -226,7 +233,7 @@ export default function Home() {
             GitHub
           </a>
           <a
-            href="https://linkedin.com/in/jackcampbell5"
+            href={LINKEDIN}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-border dark:border-border-dark text-sm text-ink-muted dark:text-ink-muted-dark hover:border-brand-pink hover:text-brand-pink dark:hover:border-brand-pink-light dark:hover:text-brand-pink-light transition-colors focus-visible:outline-2 focus-visible:outline-brand-pink focus-visible:outline-offset-2"
@@ -249,6 +256,13 @@ export default function Home() {
           >
             Resume (PM)
           </a>
+          {/* Only entry point to the unlisted /links page */}
+          <Link
+            to="/links"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-brand-pink text-white text-sm font-medium hover:bg-brand-pink-dark transition-colors focus-visible:outline-2 focus-visible:outline-brand-pink focus-visible:outline-offset-2"
+          >
+            All my links →
+          </Link>
         </div>
       </section>
     </div>

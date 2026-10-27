@@ -56,17 +56,19 @@ export const activities = [
       'Ran community beyond trips: weekly lunches and Discord activity groups.',
     ],
     metrics: { members: '180+', trips: 8, participants: '100+', companies_represented: 20 },
-    story: `I expected three people to show up for a hike. 180 joined the Discord.
+    story: `I expected three people to show up a hike. 180 joined the Discord.
 
-During my first Bay Area internship I spent most weekends in my apartment — great work Monday to Friday, then nothing. When I learned I was coming back, I decided that wouldn't happen twice, and guessed other interns felt the same. The plan was modest: find three people and a car to hike on Saturdays.
+Last summer I moved to the Bay Area for an internship and spent most of my weekends at my apartment. Interesting work Monday through Friday, then nothing. When I found out I was coming back, I decided that wasn't happening twice and figured a few other interns probably felt the same way. The goal was to find three people and a car to go hiking on Saturdays.
 
-Five months later the Bay Area Intern Hiking Club had run 8 trips — 4 day trips and 4 overnights with rental cars and hotels — to places like Lake Tahoe, Half Dome, Sequoia, and Big Sur. Over 100 participants came from 20 tech companies, and all of it was planned on nights and weekends around a full-time internship.
+Five months later, I had started the Bay Area Intern Hiking Club and ran 8 trips. That included 4 day trips and 4 overnight trips with rental cars and hotels, going to places such as Lake Tahoe, Half Dome, Sequoia National Park, and Big Sur. Over 100 participants, from 20 tech companies including Meta, Google, Apple, Netflix, LinkedIn, and Rivian. All of it planned on nights and weekends alongside my full-time internship.
 
-The hardest trip was Muir Woods: 28 strangers, 6 carpools, timed entry passes, and a destination an hour out with no cell signal, so every problem had to be solved before anyone left. I built driver packets with passenger names, phone numbers, addresses, pickup times, a recommended route, and step-by-step parking-pass instructions. Six cars left from different corners of the Bay. Everyone arrived. Everyone got home.
+The hardest one was Muir Woods. 28 strangers, 6 carpools, timed entry passes, and a destination an hour outside the city with no cell signal. That meant every problem had to be solved before anyone left. So I built driver packets: passenger names, phone numbers, addresses, and pickup times, plus a recommended route and step-by-step instructions for using the parking pass. Six cars left from different corners of the Bay Area. Everyone arrived. Everyone got home.
 
-That packet is the whole thesis. The goal was never the hardest or most impressive hike — it was to make saying yes as easy as possible. No gear knowledge, no logistics to untangle, no need to already know someone in the group chat. Lower the barrier, and more people end up outside.
+That packet is the whole thesis. The goal was never to run the hardest, most impressive hike; it was to make saying yes as easy as possible. No gear knowledge required, no logistics to untangle, no need to already know someone in the group chat. Lower the barrier, and more people end up outside exploring the beautiful Northern California nature.
 
-This chapter of the club is over, but I'm not done building things like this. If you're thinking of starting something similar, reach out — I'm happy to share how I ran it.`,
+Thank you to everyone who was a part of the club, whether it was joining our weekly lunches, participating in the Discord server activity groups, or attending the trips. It would not have been the same without you.
+
+Feel free to reach out if you're thinking of running something like this; I'm happy to share how I ran it. This chapter of the club is over, but I'm not done building things like this.`,
   },
   {
     id: 'maryland-ghostlight',

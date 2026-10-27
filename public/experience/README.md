@@ -8,6 +8,7 @@ Drop logo files here. Each experience entry in `src/data/experience.js` has an `
 | `homes-not-borders.png` | Homes Not Borders |
 | `nist.png` | NIST (both roles) |
 | `alpine.png` | Alpine Rewards |
+| `AdobeIcon.png` | Adobe Student Insider |
 
 Recommended: square PNG with transparent background, at least 40×40px (displayed at 20×20).
 Set `iconUrl: null` in the data file to hide the icon for a specific entry.

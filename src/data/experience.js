@@ -10,6 +10,27 @@
 
 export const experiences = [
   {
+    id: 'adobe-student-insider',
+    org: 'Adobe',
+    title: 'Student Insider',
+    dates: 'Jul 2026 – Present',
+    location: 'Remote',
+    color: 'rose',
+    iconUrl: '/experience/AdobeIcon.png',
+    sweSummary:
+      'Selected 1 of 30 from 8,000+ applicants as a standing user voice for Adobe product teams, heavily involved in feedback sessions with PMs.',
+    pmSummary:
+      'Selected 1 of 30 from 8,000+ applicants as a standing Adobe user voice, now partnering biweekly with product leads in a 3-person pod on a new student Acrobat experience.',
+    sweBullets: [
+      'Product Feedback: Selected 1 of 30 from 8,000+ applicants as a standing user voice for Adobe product teams, surfacing feedback in recurring sessions with PMs on unreleased features.',
+      'Cross-functional Collaboration: Partnering biweekly with Adobe product leads in a 3-person pod to improve the new-user experience for a new student-facing Acrobat product.',
+    ],
+    pmBullets: [
+      'Selected 1 of 30 from 8,000 applicants as a standing user voice for Adobe product teams, heavily involved in recurring feedback sessions with PMs on unreleased features and early concepts.',
+      'Partnering biweekly with Adobe product leads in a 3-person cross-disciplinary pod to improve the new-user experience for a new Acrobat experience for students, with recommendations to be presented to product executives in Q4.',
+    ],
+  },
+  {
     id: 'meta-2026',
     org: 'Meta',
     title: 'Software Engineering Intern',
